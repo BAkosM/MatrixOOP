@@ -1,3 +1,4 @@
+import java.io.Console;
 import java.util.Random;
 
 public class Matrix {
@@ -67,6 +68,24 @@ public class Matrix {
         return new int[] {-1,-1}; 
         }
         return new int[] {sorI, oszlopI};
+    }
+
+    public double getSorOsszeg(int sorI){
+        double ossz = 0;
+        for (int i = 0; i < this.m.length; i++){
+            ossz =+ this.m[sorI][i];
+        }
+        return ossz;
+    }
+
+    public double getOszlopMax(int oszlopI){
+        double max = 0;
+        for (int i = 0; i < this.m[oszlopI].length; i++){
+            if(max < this.m[i][oszlopI]){
+                max = this.m[i][oszlopI];
+            }     
+        }
+        return max;
     }
 
     @Override
